@@ -9,6 +9,10 @@ const Header = ({ isAuthenticated }) => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <header>
       <div className="logo">
@@ -26,21 +30,21 @@ const Header = ({ isAuthenticated }) => {
       <nav className={`nav-bar ${isNavOpen ? 'active' : ''}`}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeNav}>Home</Link>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={closeNav}>About Us</a>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/services" onClick={closeNav}>Services</Link>
           </li>
           {!isAuthenticated ? (
             <li id="log-sign">
-              <Link to="/login-signup">Signup/Login</Link>
+              <Link to="/login-signup" onClick={closeNav}>Signup/Login</Link>
             </li>
           ) : (
             <li id="my-pro">
-              <Link to="/myProfile">My Profile</Link>
+              <Link to="/myProfile" onClick={closeNav}>My Profile</Link>
             </li>
           )}
         </ul>
