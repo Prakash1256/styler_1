@@ -29,5 +29,6 @@ export const images = {
       "https://www.lookssalon.in/public/images//brands/wet_brush.webp",
       "https://www.lookssalon.in/public/images//brands/american-crew.webp"
     ]
+
   };
   

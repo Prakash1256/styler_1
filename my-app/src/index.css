@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
 }
 
+/* Header.js */
 header {
   width: 100%;
   background-color: rgb(230, 222, 227);
@@ -82,11 +84,13 @@ header {
   display: none;
 }
 
+
 @media only screen and (max-width: 1320px) {
   header {
     padding: 0 30px;
   }
 }
+
 
 @media only screen and (max-width: 900px) {
   .hamburger {
@@ -101,7 +105,7 @@ header {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: rgb(230, 222, 227, 0.9);
+    background-color: rgba(230, 222, 227, 0.9);
     transition: height 0.5s ease, opacity 0.5s ease;
     overflow: hidden;
     display: flex;
@@ -120,6 +124,7 @@ header {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 0;
   }
 
   .nav-bar ul li {
@@ -133,31 +138,37 @@ header {
   }
 }
 
+/* Small Smartphones */
 @media only screen and (max-width: 575px) {
   .nav-bar ul li a {
     padding: 10px 15px; 
+    font-size: 18px; 
+  }
+
+  .logo {
+    width: 30%; 
+    margin-left: 20px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 60px;
   }
 }
 
 
-
-
-
-
-
-/* Reset Margin and Padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Main Section */
+
 main {
   width: 100%;
 }
 
-/* Category Section (Our Services) */
+/* CategorySection.js */
 #category {
   width: 100%;
   margin: auto;
@@ -230,21 +241,13 @@ main {
 }
 
 
-
-
-
-
-
-
-
-/* Reset Margin and Padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Trend Section */
+/* TrendSection.js */
 #trend {
   width: 100%;
   margin: 0;
@@ -293,14 +296,14 @@ main {
 }
 
 
-/* Base styles for partner section */
+/*  Partnersection.js */
 .partner {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 10px; 
 }
 
-/* Base styles for partner cards */
+
 .partner-card {
   border: 1px solid #ddd;
   padding: 15px;
@@ -313,7 +316,6 @@ main {
   text-align: center;
 }
 
-/* Set the maximum width for the images */
 .partner-card img {
   max-width: 100%;
   height: auto;
@@ -321,7 +323,7 @@ main {
   transition: transform 0.3s ease; 
 }
 
-/* Hover effect on image */
+
 .partner-card img:hover {
   transform: translateX(20px); 
 }
@@ -415,7 +417,7 @@ main {
   }
 }
 
-/* Tablets (min-width: 601px and max-width: 1024px) */
+
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .logo2 img {
     width: 90px; 
@@ -472,7 +474,7 @@ main {
 
 /* Media Queries */
 
-/* Mobile (max-width: 600px) */
+
 @media screen and (max-width: 600px) {
   .adminLog a {
     padding: 10px 20px; 
@@ -480,7 +482,7 @@ main {
   }
 }
 
-/* Tablet (min-width: 601px and max-width: 1024px) */
+
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .adminLog a {
     padding: 12px 25px;
@@ -538,11 +540,11 @@ main {
   transition: all 1s ease;
   transform-origin: left;
   transform-style: preserve-3d;
-  backface-visibility: hidden; /* Ensure backface visibility */
+  backface-visibility: hidden;
 }
 
 .container #flip:checked ~ .cover {
-  transform: rotateY(-180deg); /* Flip effect */
+  transform: rotateY(-180deg); 
 }
 
 .container .cover .front,
@@ -794,34 +796,34 @@ main {
 
 
 
-/* servicepage.js */
-
-
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; 
 }
+
 
 main {
   width: 100%;
-  
 }
-.admin{
+
+/* Adminsection.js */
+.admin {
   text-align: center;
   margin-top: 15px;
 }
 
+
 #add-details-div {
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   width: 90%;
-  display: block;
   border: 1px solid gray;
-  
   padding: 30px;
   border-radius: 20px;
 }
 
+/* Form input styling */
 #add-details-div form input {
   margin-top: 10px;
   padding: 8px 2.5rem;
@@ -830,64 +832,62 @@ main {
   font-size: 20px;
 }
 
+/* Submit button styling */
 #add-details-div form input[type="submit"] {
-  /* background-color: rgb(0,115,195); */
   background-color: #a03141;
   color: whitesmoke;
 }
 
 #add-details-div form input[type="submit"]:hover {
-  /* background-color: rgb(0, 149, 255); */
   background-color: #c12c43;
 }
 
+
 #service-div {
   width: 90%;
-  margin: auto;
-  margin-top: 30px;
+  margin: 30px auto;
 }
 
 .service-child-div {
   margin-top: 30px;
   width: 100%;
-  height: 300px;
+  height: auto; 
   display: flex;
+  flex-direction: column; 
   color: rgb(254, 254, 254);
   font-weight: 600;
-  background: hsla(331, 75%, 42%, 1);
   background: linear-gradient(90deg, hsla(331, 75%, 42%, 1) 0%, hsla(357, 40%, 71%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(331, 75%, 42%, 1) 0%, hsla(357, 40%, 71%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(331, 75%, 42%, 1) 0%, hsla(357, 40%, 71%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BC1B68", endColorstr="#D3989B", GradientType=1 );
   padding: 20px;
   border-radius: 30px;
 }
 
 .service-img-div {
-  /* margin-left: 10px; */
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  height: auto; 
+  display: flex;
+  justify-content: center; 
 }
 
 .service-img-div img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 30px;
 }
 
 .service-details-div {
-  width: 60%;
-  margin-left: 20px;
+  width: 100%;
+  margin-top: 20px; 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; 
 }
 
 .service-details-child-div {
-  width: 70%;
+  width: 100%;
 }
 
 .service-button-child-div {
-  width: 30%;
+  width: 100%;
+  margin-top: 15px; 
 }
 
 .service-button-child-div button {
@@ -897,10 +897,9 @@ main {
   border-radius: 10px;
   border: none;
   color: white;
-  /* background-color: #123d5f; */
   font-size: 20px;
   font-weight: 600;
-  /* #5b0b03 */
+  display: block; 
 }
 
 .service-button-child-div button:nth-child(1) {
@@ -923,6 +922,7 @@ main {
   color: green;
 }
 
+/* Box styling */
 .box {
   padding: 5px 10px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -935,16 +935,15 @@ main {
 }
 
 .semi-colon {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 5px;
   color: black;
 }
 
+/* Footer styling */
 .footer {
-  background-color: rgb(230, 222, 227, 0.9);
-  grid-template-columns: repeat(1, 1fr) !important;
+  background-color: rgba(230, 222, 227, 0.9);
   text-align: center;
- 
+  padding: 20px 0;
 }
 
 .footer h1 {
@@ -953,7 +952,7 @@ main {
 }
 
 .footer p {
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px;
 }
 
 .footer-contact {
@@ -969,6 +968,7 @@ main {
   margin: auto;
 }
 
+/* Social media hover effects */
 .facebook:hover {
   color: blue;
 }
@@ -981,17 +981,17 @@ main {
   color: red;
 }
 
+/* Admin log section */
 .adminLog {
   width: 95%;
   display: flex;
   justify-content: flex-end;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .adminLog a {
   text-decoration: none;
-  background-color: rgb(230, 222, 227, 0.9);
+  background-color: rgba(230, 222, 227, 0.9);
   color: black;
   font-size: 15px;
   font-weight: 600;
@@ -1004,45 +1004,85 @@ main {
   background-color: gray;
 }
 
+
 .last-para {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-weight: 600;
 }
 
-@media only screen and (max-width: 845px) {
-  .service-details-div {
-      display: block;
-  }
 
-  .service-details-div > div {
-      width: 100%;
+@media only screen and (max-width: 1024px) {
+  #service-div {
+    width: 95%;
   }
 
   .service-child-div {
-      height: 400px;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .service-details-div {
+    flex-direction: column;
+    margin-top: 15px; 
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* Tablets and Smartphones */
+@media only screen and (max-width: 768px) {
   .service-child-div {
-      height: auto;
-      display: block;
+    height: auto;
+    flex-direction: column;
   }
 
   .service-img-div {
-      margin: auto;
-      width: 50%;
-      height: 300px;
+    width: 100%;
+    height: auto;
+    margin: auto;
   }
 
   .service-details-div {
-      width: 100%;
-      text-align: left;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .service-button-child-div {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 15px 0;
+  }
+  #add-details-div form input {
+    margin-top: 10px;
+    padding: 5px 2.5rem;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    font-size: 10px;
   }
 }
 
+
+@media only screen and (max-width: 480px) {
+  .service-button-child-div button {
+    font-size: 18px; 
+    padding: 15px 0;
+  }
+
+  .footer h1 {
+    font-size: 30px; 
+  }
+  #add-details-div form input {
+    margin-top: 10px;
+    padding: 4px 2.0rem;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
+
+/* Preloader styles */
 #preloader {
   display: flex;
   justify-content: center;
@@ -1066,11 +1106,10 @@ main {
 
 @keyframes spin {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -1079,6 +1118,57 @@ main {
   visibility: hidden;
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
+
+
+#video-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#video-div video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #video-div {
+    margin: 10px auto;
+  }
+
+  #video-div video {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  #video-div {
+    margin: 5px auto;
+  }
+
+  #video-div video {
+    width: 100%;
+    max-width: 400px; 
+  }
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  #video-div {
+    margin: 15px auto;
+  }
+
+  #video-div video {
+    width: 100%;
+    max-width: 80%; 
+  }
+}
+
 
 
 

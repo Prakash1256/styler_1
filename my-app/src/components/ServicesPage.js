@@ -90,6 +90,13 @@ function Services() {
 
     return (
         <div>
+         <div id="video-div">
+                
+                <video width="500" controls>
+                    <source src="/image/mp4.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+             </div>
             <div id="add-details-div">
                 <h1>Add New Service</h1>
                 <form onSubmit={addService}>
@@ -121,6 +128,7 @@ function Services() {
                     </div>
                 ))}
             </div>
+           
         </div>
     );
 }
