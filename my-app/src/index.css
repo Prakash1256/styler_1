@@ -502,7 +502,6 @@ main {
 }
 
 
-/* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
@@ -745,18 +744,30 @@ main {
     width: 100%;
   }
 
+  /* Initially hide the signup form on mobile */
   .form-content .signup-form {
-    display: none;
+    /* display: none; */
   }
 
+  /* Show the signup form when #flip is checked */
   .container #flip:checked ~ .forms .signup-form {
     display: block;
   }
 
+  /* Hide the login form when #flip is checked */
   .container #flip:checked ~ .forms .login-form {
     display: none;
   }
+  .container #flip:checked ~ .forms .signup-form {
+  display: block;
 }
+
+.container #flip:checked ~ .forms .login-form {
+  display: none;
+}
+
+}
+
 
 #preloader {
   display: flex;
@@ -792,7 +803,6 @@ main {
   visibility: hidden;
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
-
 
 
 
